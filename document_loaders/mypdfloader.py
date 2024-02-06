@@ -71,9 +71,16 @@ class RapidOCRPDFLoader(UnstructuredFileLoader):
                         if result:
                             ocr_result = [line[1] for line in result]
                             resp += "\n".join(ocr_result)
+                
+                # tables
+                tabs = page.find_tables()
+                for tab in tabs:
+                    for line in tab.extract():
+                        resp += "\n"+str(line)
 
                 # 更新进度
                 b_unit.update(1)
+            
             return resp
 
         text = pdf2text(self.file_path)
@@ -82,6 +89,6 @@ class RapidOCRPDFLoader(UnstructuredFileLoader):
 
 
 if __name__ == "__main__":
-    loader = RapidOCRPDFLoader(file_path="/Users/tonysong/Desktop/test.pdf")
+    loader = RapidOCRPDFLoader(file_path="/src/knowledge_base/samples/content/edu/Belize_SDG4-Profile.pdf")
     docs = loader.load()
-    print(docs)
+    print(docs[0].page_content)

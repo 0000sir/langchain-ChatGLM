@@ -21,7 +21,7 @@ pathlib~=1.0.1
 pytest~=7.4.3
 llama-index==0.9.35
 pyjwt==2.8.0
-
+websockets==12.0
 dashscope==1.13.6
 arxiv~=2.1.0
 youtube-search~=2.1.2
@@ -37,4 +37,23 @@ watchdog~=3.0.0
 # jq==1.6.0
 # beautifulsoup4~=4.12.2
 # pysrt~=1.1.2
+cachetools
+strsimpy==0.2.1
+markdownify==0.11.6
+tiktoken==0.5.2
+tqdm==4.66.1
+sentence_transformers==2.2.2
 
+arxiv==2.1.0
+youtube-search==2.1.2
+duckduckgo-search==3.9.9
+metaphor-python==0.1.23
+streamlit==1.30.0
+streamlit-option-menu==0.3.12
+streamlit-antd-components==0.3.1
+streamlit-chatbox==1.1.11
+streamlit-modal==0.1.0
+streamlit-aggrid==0.3.4.post3
+httpx==0.26.0
+watchdog==3.0.0
+pyjwt==2.8.0
